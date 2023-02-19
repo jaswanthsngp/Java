@@ -14,5 +14,6 @@ class Main
 		{
 			System.out.println("Odd Number");
 		}
+		sc.close();
 	}
 }
