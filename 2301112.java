@@ -15,5 +15,6 @@ class Main
 			System.out.println("Not a Prime");
 		else
 			System.out.println("Prime Number");
+		sc.close();
 	}
 }
