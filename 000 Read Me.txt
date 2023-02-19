@@ -1,0 +1,4 @@
+to compile: javac "file name.java"
+to run a class: java "class name"
+to compile and run a file with Main class:
+java "file name.java"
