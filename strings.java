@@ -41,6 +41,7 @@ class Main{
         System.out.println(s8);
         s8= s8.replace("dont ", "");    //replaces target with replacement and returns new string
         System.out.println(s8);
+        System.out.println(s8.replaceFirst("a", "@"));    //replaces the first occurance of target with replacement
         c= new char[5];
         s8.getChars( 1, 6, c, 0);   //puts the chars into the destination char array
         for(char i: c)
@@ -51,8 +52,37 @@ class Main{
         String s9= "example1";                          //  are pointing to same address
         System.out.println(s1.equals(s9));              //but in string class, it is overriden to check only values
         System.out.println(s1.contentEquals(s9));       //This is the same, IDK why they have two methods
+        System.out.println(s1.compareTo(s9));           //returns -ve if s1<s9, 0 if s1==s9, +ve if s1>s9
+        System.out.println(s1.compareTo(s8));
         s9= "ExaMple1";
         System.out.println(s1.equalsIgnoreCase(s9));    //This ignores case while comparing
-        //.compareTo
+        System.out.println(s1.compareToIgnoreCase(s9)); //Compare, ignoring case.
+        s9= "example1";
+        System.out.println(s9.indexOf('e'));
+        System.out.println(s9.indexOf('e', 2));
+        System.out.println(s9.lastIndexOf('e'));
+        System.out.println(s9.lastIndexOf('e', 4));
+        System.out.println(s9.indexOf("am"));
+        System.out.println(s9.lastIndexOf("am"));
+        System.out.println(s9.indexOf("am", 2));
+        System.out.println(s9.lastIndexOf("am", 2));
+        System.out.println(s9.substring(2));                //2, 3, 4,....,n
+        System.out.println(s9.substring(2, 5)); //2, 3, 4
+        System.out.println(s9.toUpperCase());
+        System.out.println(s9.toLowerCase());
+        s9= " example ";
+        System.out.println(s9.trim());                  // removes spaces to the left and right of string
+        s9= "example 1 is so boring";
+        String[] s= s9.split(" ");              // splits everywhere there is a space
+        for(String i: s)
+            System.out.println(i);
+        s= s9.split(" ", 3);                // split method, limited to the limit
+        for(String i: s)
+            System.out.println(i);
+        s= s9.split(" ", -2);                      // 0/-ve limits doesn't apply, it goes on splitting
+        for(String i: s)
+            System.out.println(i);
+        System.out.println(String.join(" ", "3", "2", "532", "dowj"));  //joins elements by putting delimiter in between
+        
     }
 }
