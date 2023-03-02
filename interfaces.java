@@ -2,7 +2,7 @@
     static void work(){
         System.out.println("Working inside MacBook");
     }
-    void play();
+    void play(int a, int b);
 }
 
 abstract interface HPP{
@@ -21,22 +21,18 @@ interface HPC extends HPP{
     }
 }
 
-class Laptop implements MacBook, HPC {
+/*class Laptop implements MacBook, HPC {
     public void work(){
         System.out.println("Working inside Laptop");
     }
     public void play(){
         System.out.println("Mac Book Playing");
     }
-}
+}*/
 
 class Main{
     public static void main(String[] args) {
-        Laptop lp= new Laptop();
-        lp.work();
-        lp.play();
-        lp.work(10);
-        MacBook.work();
-        HPP.work();
+        MacBook obj= (a, b) -> System.out.println("Playing with Mac");  //Lambda
+        obj.play(10, 20);
     }
 }
