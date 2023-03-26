@@ -2,12 +2,10 @@
 
 import java.util.*;
 
-class Ewallet
-{
+class Ewallet{
 	String name;
 	int balance;
-	static
-	{
+	static{
 		//Static block will be excecuted first of all, even before the Object is created
 		System.out.println("This is from static block");
 	}
