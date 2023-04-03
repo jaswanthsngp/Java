@@ -1,5 +1,3 @@
-import java.util.FormatterClosedException;
-
 class Main{
     public static void main(String[] args) {
         int p, z, n, size;
@@ -13,6 +11,14 @@ class Main{
                 else n++;
             }
         }
+        //  This is a multi-catch block, avoids writing several catches
+        // catch(ArrayIndexOutOfBoundsException|NumberFormatException obj){
+        //     if(obj instanceof ArrayIndexOutOfBoundsException){
+        //          System.out.println("Enter enough nubers");
+        //     }else if(obj instanceof NumberFormatException){
+        //          System.out.println("We have excpected some integers");
+        //     }
+        // }
         catch(ArrayIndexOutOfBoundsException a){
             System.out.println("Lesser number of elements entered");
         }
@@ -24,5 +30,6 @@ class Main{
             System.out.print(z+" Zeroes and ");
             System.out.print(n+" Negatives");
         }
+        // the try-catch blocks can be nexted inside each other, in a try block or in a catch block
     }
 }
